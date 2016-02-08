@@ -1,16 +1,17 @@
 <?php
-/*Global define*/
+//Global define
 DEFINE('BASE_URL', 'http://cre1-lic-mgt.vnet.valeo.com/');
 DEFINE('APP_TITLE', 'License Management');
 DEFINE('APP_VERSION', '2.0');
 DEFINE('LOG_DIRECTORY', DIRECTORY_SEPARATOR.'logs'.DIRECTORY_SEPARATOR);
-DEFINE('WEBMASTER_ADDRESS', 'younes.sadmi@valeo.com');
-/*DB define*/
-DEFINE('DBNAME', 'lmgt');
-DEFINE('DBHOST', '10.46.0.44');
+DEFINE('WEBMASTER_ADDRESS', '');
+//DB define
+DEFINE('USING_A_DB', FALSE); //SET TO TRUE IF YOU USE A DB WITH THE FOLLOWING INFO
+DEFINE('DBNAME', '');
+DEFINE('DBHOST', '');
 DEFINE('DBTYPE', 'mysql');
 DEFINE('DBPORT', '3306');
-DEFINE('DBUSER', 'license');
-DEFINE('DBPASSWORD', 'license');
+DEFINE('DBUSER', '');
+DEFINE('DBPASSWORD', '');
 
 ?>
