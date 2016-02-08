@@ -1,8 +1,8 @@
 <?php
 //Global define
-DEFINE('BASE_URL', 'http://cre1-lic-mgt.vnet.valeo.com/');
-DEFINE('APP_TITLE', 'License Management');
-DEFINE('APP_VERSION', '2.0');
+DEFINE('BASE_URL', 'http://localhost/Template_MVC/');
+DEFINE('APP_TITLE', '');
+DEFINE('APP_VERSION', '');
 DEFINE('LOG_DIRECTORY', DIRECTORY_SEPARATOR.'logs'.DIRECTORY_SEPARATOR);
 DEFINE('WEBMASTER_ADDRESS', '');
 //DB define

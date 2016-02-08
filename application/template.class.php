@@ -11,8 +11,8 @@ Class template {
     }
 
     public function show($name, $js = null){
-        $header = __SITE_PATH.DIRECTORY_SEPARATOR.'views'.DIRECTORY_SEPARATOR.'layout'.DIRECTORY_SEPARATOR.'site_header.php';
-        $footer = __SITE_PATH.DIRECTORY_SEPARATOR.'views'.DIRECTORY_SEPARATOR.'layout'.DIRECTORY_SEPARATOR.'site_footer.php';
+        $header = __SITE_PATH.DIRECTORY_SEPARATOR.'views'.DIRECTORY_SEPARATOR.'layout'.DIRECTORY_SEPARATOR.'header.php';
+        $footer = __SITE_PATH.DIRECTORY_SEPARATOR.'views'.DIRECTORY_SEPARATOR.'layout'.DIRECTORY_SEPARATOR.'footer.php';
         $pathView = __SITE_PATH.DIRECTORY_SEPARATOR.'views'.DIRECTORY_SEPARATOR.$name.'.php';
         if(file_exists($pathView) == false){
             throw new Exception('Template not found in '. $pathView);
