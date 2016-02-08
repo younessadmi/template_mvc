@@ -20,14 +20,15 @@ class DB {
 
     private function __construct($registry) {
         $this->registry = $registry;
-
-        try
-        {
-            $this->connexion = new PDO(DBTYPE.":host=".DBHOST.";dbname=".DBNAME, DBUSER, DBPASSWORD);
-        }catch(PDOException $e)
-        {
-            print "Error new PDO: ".$e->getMessage()."<br/>";
-            die();
+        if(USING_A_DB == true){
+            try
+            {
+                $this->connexion = new PDO(DBTYPE.":host=".DBHOST.";dbname=".DBNAME, DBUSER, DBPASSWORD);
+            }catch(PDOException $e)
+            {
+                print "Error new PDO: ".$e->getMessage()."<br/>";
+                die();
+            }
         }
     }
 }
