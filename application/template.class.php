@@ -11,12 +11,12 @@ Class template {
     }
 
     function show($name) {
-        $header = __SITE_PATH.DIRECTORY_SEPARATOR.'views'.DIRECTORY_SEPARATOR.'site_header.php';
-        $footer = __SITE_PATH.DIRECTORY_SEPARATOR.'views'.DIRECTORY_SEPARATOR.'site_footer.php';
-        $path   = __SITE_PATH.DIRECTORY_SEPARATOR.'views'.DIRECTORY_SEPARATOR.$name.'.php';
-        if(file_exists($path) == false)
+        $header = __SITE_PATH.DIRECTORY_SEPARATOR.'views'.DIRECTORY_SEPARATOR.'layout'.DIRECTORY_SEPARATOR.'site_header.php';
+        $footer = __SITE_PATH.DIRECTORY_SEPARATOR.'views'.DIRECTORY_SEPARATOR.'layout'.DIRECTORY_SEPARATOR.'site_footer.php';
+        $pathView   = __SITE_PATH.DIRECTORY_SEPARATOR.'views'.DIRECTORY_SEPARATOR.$name.'.php';
+        if(file_exists($pathView) == false)
         {
-            throw new Exception('Template not found in '. $path);
+            throw new Exception('Template not found in '. $pathView);
             return false;
         }
         // Load variables
@@ -25,7 +25,7 @@ Class template {
             $$key = $value;
         }
         include($header);
-        include($path);
+        include($pathView);
         include($footer);
     }
 }

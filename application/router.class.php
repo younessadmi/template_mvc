@@ -8,11 +8,11 @@ class router {
     public $controller;
     public $action;
 
-    function __construct($registry) {
+    public function __construct($registry) {
         $this->registry = $registry;
     }
 
-    function setPath($path){
+    public function setPath($path){
         if(is_dir($path) == false)
         {
             throw new Exception ('Invalid controller path: `' . $path . '`');
@@ -25,7 +25,7 @@ class router {
 
         if(is_readable($this->file) == false)
         {
-            $this->registry->template->show('not_found');
+            $this->registry->template->show('layout'.DIRECTORY_SEPARATOR.'404');
             die();
         }
         /*** include the controller ***/
