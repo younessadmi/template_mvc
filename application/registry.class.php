@@ -1,6 +1,6 @@
 <?php
 Class Registry {
-    private $vars = array();
+    public $vars = array();
 
     public function __set($index, $value){
         $this->vars[$index] = $value;

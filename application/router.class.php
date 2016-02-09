@@ -25,7 +25,7 @@ class router {
 
         if(is_readable($this->file) == false)
         {
-            $this->registry->template->show('layout'.DIRECTORY_SEPARATOR.'404');
+            $this->registry->template->show('404', true);
             die();
         }
         /*** include the controller ***/
