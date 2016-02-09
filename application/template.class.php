@@ -47,9 +47,13 @@ Class template {
         }
 
         include($header);
+        echo '<style>';
         include($pathCSS);
+        echo '</style>';
         include($pathView);
+        echo '<script>';
         include($pathJS);
+        echo '</script>';
         include($footer);
     }
 }
