@@ -3,7 +3,7 @@ class router {
     private $registry;
 
     private $path;
-    public $args = array();
+    public $args = [];
     public $file;
     public $controller;
     public $action;
@@ -34,7 +34,7 @@ class router {
         $class = $this->controller . 'Controller';
         $controller = new $class($this->registry);
         /*** check if the action is callable ***/
-        if(is_callable(array($controller, $this->action)) == false)
+        if(is_callable([$controller, $this->action]) == false)
         {
             $action = 'index';
         }

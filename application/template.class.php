@@ -1,7 +1,7 @@
 <?php
 Class template {
     private $registry;
-    private $vars = array();
+    private $vars = [];
     function __construct($registry){
         $this->registry = $registry;
 
