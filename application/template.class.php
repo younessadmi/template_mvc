@@ -2,10 +2,13 @@
 Class template {
     private $registry;
     private $vars = [];
+    private $title = APP_TITLE;
+    
     function __construct($registry){
         $this->registry = $registry;
 
     }
+    
     public function __set($index, $value){
         $this->vars[$index] = $value;
     }
@@ -45,6 +48,8 @@ Class template {
         foreach($this->vars as $key => $value){
             $$key = $value;
         }
+        
+        $this->title = $controller.' > '.$action.' - '.$this->title;
 
         include($header);
         echo '<style>';
@@ -55,5 +60,9 @@ Class template {
         include($pathJS);
         echo '</script>';
         include($footer);
+    }
+    
+    public function getTitle(){
+        return $this->title;   
     }
 }
