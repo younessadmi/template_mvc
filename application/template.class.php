@@ -49,7 +49,7 @@ Class template {
             $$key = $value;
         }
         
-        $this->title = $controller.' > '.$action.' - '.$this->title;
+        $this->title .= ' - '.$controller.' > '.$action;
 
         include($header);
         echo '<style>';
